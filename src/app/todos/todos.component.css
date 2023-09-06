@@ -1,0 +1,53 @@
+
+.todoProperties:hover{
+    background-color:rgba(0, 0, 0, 0.849);
+
+    .todoTextProp{
+        font-size: 12px;
+        color: white;
+    }
+    
+}
+
+.todoTextProp{
+    font-size: 12px;
+    color: rgba(245, 222, 179, 0.515);
+    transition: all 0.2s;
+}
+
+.checkerMark{
+    color: transparent
+}
+
+.todoCircle{
+   border: none;
+   background-color: rgba(128, 128, 128, 0.673);
+   
+   .checkerMark{
+    color: black;
+    font-weight: 700;
+   }
+   
+}
+
+.todoCircle.completed{
+    background-color: rgba(9, 218, 89);
+    border: none;
+
+    .checkerMark{
+        color: black;
+        font-weight: 700;
+       }    
+}
+
+.note-text{
+    font-size: 12px;
+    color: rgba(245, 222, 179, 0.815);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.maxWeight{
+ 
+    max-height: 4rem;
+}

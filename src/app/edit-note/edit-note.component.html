@@ -1,0 +1,33 @@
+<div class="EditNote-wrapper overflow-y-auto h-full ">
+
+    <div class="EditNote-container max-w-2xl mx-auto p-5 ">
+            <div class="container p-4 rounded bg-slate-200/20">
+                <p class="textBox font-extrabold text-xl mb-2">Edit Note</p>
+            
+                <form  (submit)="OnsubmitForm(form)" #form="ngForm">
+
+            <div class="mb-4">
+                <input type="text" #title="ngModel" class=" text-black hover:text-white BorderStyle w-full bg-slate-200 hover:bg-slate-200/20 rounded outline-none text-xs p-2 " placeholder="Enter your text..." [ngModel]="note.title" name="title" required minlength="5">
+
+                <div *ngIf="title.invalid">
+                <p class="text-xs text-center text-gray-400 mb-2">Insert your title in here</p>
+                </div>
+            </div>
+               
+            <div class="mb-4">
+                <textarea class="p-2 text-black hover:text-white minHeight BorderStyle w-full bg-slate-200 hover:bg-slate-200/20 rounded outline-none text-xs" placeholder="Type your text here..." [ngModel]="note.content" name="content" required #content="ngModel" minlength="15">                    
+                </textarea>
+            </div>
+
+                <div class="flex justify-between items-center mt-2 gap-2">
+                    <div>
+                        <button type="button" routerLink="../" class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Cancel</button>
+                        
+                    </div>
+                        <button class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Save</button>
+                </div>
+            </form>
+
+            </div>
+        </div> 
+</div>

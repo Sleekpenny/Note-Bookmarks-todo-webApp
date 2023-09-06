@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flexGrow{
+    flex-grow: 6;
+    min-height: 0;
+}
+
+.baseProperties {
+    padding: 20px ;
+
+}
+
+.flexGrow1{
+    flex-grow: 1;
+}
+
+.properties{
+    padding: 10px;
+    margin: 10px;   
+}
+
+.properties:active{
+    transform: translateY(-2px);
+}

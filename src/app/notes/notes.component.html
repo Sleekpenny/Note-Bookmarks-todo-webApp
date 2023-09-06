@@ -1,0 +1,13 @@
+<div class="note-wrapper overflow-y-auto h-full ">
+    <div class="note-container max-w-3xl mx-auto gap-2 flex flex-col mb-2 p-5">
+       
+        <a [routerLink] = "[note.id]" class="note-page bgColor rounded cursor-pointer" *ngFor="let note of notes">
+            <p class="note-text" *ngIf="note.title">{{note.title}}</p>
+            <p class="noteTextProp" *ngIf="note.content">{{note.content}}</p>
+        </a > 
+
+        </div>
+
+        <a class="bgColor note-text p-2 flex justify-center items-center w-fit mx-auto rounded cursor-pointer" routerLink="notesInfo">Add +</a>
+ 
+</div>

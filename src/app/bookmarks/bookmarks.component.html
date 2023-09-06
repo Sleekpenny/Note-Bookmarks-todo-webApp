@@ -1,0 +1,17 @@
+<div class="bookmarks-Wrapper h-full overflow-y-auto">
+    <div class="bookmarks-container mx-auto max-w-3xl flex flex-wrap gap-2 justify-center items-center mb-4">
+        <app-bookmark-tile *ngFor="let bookmark of bookmarks" [bookmark]="bookmark"></app-bookmark-tile> 
+     </div>
+
+     <div class="flex w-fit mx-auto space-x-4">
+     <a class="bgColor note-text p-2 flex justify-center items-center rounded cursor-pointer mx-auto" routerLink="addBookmarks">Add +</a>
+     
+     <div class="bgColor note-text p-2 flex justify-center items-center  rounded cursor-pointer mx-auto" routerLink="manage"> 
+            <img src="/assets/setting.png" alt="setting" width="18">
+        <p class="ml-2">Manage</p>
+        </div>       
+    </div>
+
+    
+    
+</div>

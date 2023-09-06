@@ -1,0 +1,34 @@
+<div class="Bookmarks-wrapper overflow-y-auto h-full ">
+
+    <div class="Bookmarks-container max-w-2xl mx-auto p-5">
+            <div class="container p-4 rounded bg-slate-200/20">
+                <p class="textBox font-extrabold text-xl mb-2">Add Bookmarks</p>
+            
+            <form  (submit)="OnsubmitForm(form)" #form="ngForm" ngNativeValidate >
+                    <!-- Name title section -->
+            <div class="mb-4">
+                <p class="text-xs text-gray-300">Url Name</p>
+                <input type="text" #textField="ngModel"  ngModel name="name"
+
+                class=" text-black hover:text-white BorderStyle w-full bg-slate-200 hover:bg-slate-200/20 rounded outline-none text-xs p-2 " 
+                placeholder="host name e.g wikipedia">
+            </div>
+
+         <!-- URL Section  -->
+            <div class="mb-4">
+                <p class="text-xs text-gray-300">Url Address</p>
+                <input type="text" #textField="ngModel"  ngModel name="url" required 
+
+                class=" text-black hover:text-white BorderStyle w-full bg-slate-200 hover:bg-slate-200/20 rounded outline-none text-xs p-2 " 
+                placeholder="host address e.g http://wikipedia.org">
+            </div>
+               
+            <div class="flex justify-between items-center mt-2 gap-2">
+                <button type="button" routerLink="../" class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Cancel</button>
+                <button class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Create Note</button>
+            </div>
+            </form>
+
+            </div>
+            </div> 
+            </div>

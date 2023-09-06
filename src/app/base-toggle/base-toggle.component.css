@@ -1,0 +1,54 @@
+
+.blurBackground{
+    backdrop-filter:blur(4rem);
+    background-color: grey;
+}
+
+.bookmark-icon{
+    background: linear-gradient(45deg, #e78c75, #e2d2fd);
+    opacity: 0.8;
+}
+
+.Todo-icon{
+    background-image: linear-gradient(45deg, #5ecece, #ffbdde);
+    opacity: 0.8;
+}
+
+.notes-icon{
+    background-image: linear-gradient(45deg, #bebbdb, #5fffbc);
+    opacity: 0.8;
+}
+
+.tab:hover {
+    transform:scale(0.95);
+    transition: all 0.2s ;
+    opacity: 1;
+}
+
+.tab.selected  { 
+    border-radius: 50%;
+    transform: translateY(-20px);
+    transition: all 0.3s cubic-bezier(0, 0, 0, 1.5); 
+
+}
+
+ .tab.selected{
+    position: relative;
+    
+}
+
+.tab.selected::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: white;    
+    bottom: -22px;
+    opacity: 1;
+    transition: all 0.2s;
+    border-radius: 2px;
+}
+
+.tab.selected {
+    outline: none;
+}

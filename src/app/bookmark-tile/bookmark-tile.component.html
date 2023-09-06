@@ -1,0 +1,15 @@
+    <div class="flex flex-wrap space-x-2">
+
+    <a [href]="bookmark.url"  target="_blank" class="bgColor rounded flex flex-col items-center p-5 cursor-pointer text-xs text-gray-300">
+        
+        <p class="bgColor p-3 text-xs text-gray-300 active:text-transparent cursor-pointer font-bold" *ngIf="faviconError">{{bookmark.name.toUpperCase()[0]}}</p> 
+
+      <div class=" active:text-transparent" *ngIf="!faviconError">        
+        <img [src]="tileIconSource" alt="site" width="24" (error)="faviconError= true">      
+      </div>    
+
+      <p class="mt-2 px-2 overflow-hidden whitespace-nowrap text-ellipsis textStyles">{{bookmark.name}}</p>     
+   
+    </a>
+
+</div>

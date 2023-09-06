@@ -1,0 +1,24 @@
+.sidebar-Item .selected{
+    color: white;
+    transform: scale(1.1);
+    transition: 0.2s;
+    padding: 5px;
+    opacity: 0.4;
+}
+
+.sidebar-Item .selected::before{
+    position: relative;
+    transform: scale(0);
+    transition: 0.2s;
+}
+
+.sidebar-Item .selected::before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 12px;
+    top: 9px;
+    left: -7px;
+    background-color: white;
+    transform: scale(1);
+}

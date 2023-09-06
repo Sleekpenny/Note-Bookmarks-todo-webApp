@@ -1,0 +1,30 @@
+
+<div class="todos-wrapper h-full overflow-y-auto ">
+    <div class="todos-container p-5">
+        <div class="todoBox max-w-3xl mx-auto flex gap-2 flex-col">
+            <div class="cursor-pointer rounded p-1 bgColor flex todoProperties justify-between items-center" *ngFor="let todo of todos; trackBy: trackById" (click)="onClick(todo)" @todoItemAmine >        
+                
+                <div class="flex gap-2 items-center">        
+                <div class="w-4 h-4 rounded-full mr-2 todoCircle flex items-center justify-center" [class.completed]="todo.completed" >
+                    <p class="text-xs checkerMark">/</p>
+                </div>
+                <p class="todoTextProp" *ngIf="todo.text">{{todo.text}}</p>
+                </div>
+
+                <div class="flex gap-2 opacity-0 hover:opacity-100">
+                <button type="button" class="hover:bg-slate-400/20 p-1 rounded" (click)="onDeleteClick(todo)">
+                    <img src="/assets/icons8-delete-48.png" alt="delete" width="12" >
+                </button >
+                <button type="button" class="hover:bg-slate-400/20 p-1 rounded" routerLink="id" (click)="onClickEmmiter(todo)" >
+                    <img src="/assets/icons8-edit-48.png" alt="edit" width="12">
+                </button >              
+                </div>
+
+            </div>
+
+               <a class="bgColor note-text p-2 flex justify-center items-center w-fit mx-auto rounded cursor-pointer" routerLink="addTodo">Add +</a>
+        
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,37 @@
+
+    <div class="Bookmarks-wrapper overflow-y-auto h-full ">
+
+        <div class="Bookmarks-container max-w-2xl mx-auto p-5">
+                <div class="container p-4 rounded mt-4 ">
+                    <p class="textBox font-extrabold text-xl mb-2">{{bookmark.name}}</p>
+                
+                <form  (submit)="onSubmitForm(form)" #form="ngForm" ngNativeValidate class="mt-8">
+                        <!-- Name title section -->
+                <div class="mb-4">
+                    <p class="text-xs text-gray-300">Url Name</p>
+                    <input type="text" #name="ngModel"  [ngModel]="bookmark.name" name="name"    
+                    class=" text-black hover:text-white BorderStyle w-full bg-slate-200 hover:bg-slate-200/20 rounded outline-none text-xs p-2 " 
+                    placeholder="host name e.g wikipedia">
+                </div>
+    
+             <!-- URL Section  -->
+                <div class="mb-4">
+                    <p class="text-xs text-gray-300">Url Address</p>
+                    <input type="text" #url="ngModel"  [ngModel]="bookmark.url" name="url" required 
+    
+                    class=" text-black hover:text-white BorderStyle w-full bg-slate-200 hover:bg-slate-200/20 rounded outline-none text-xs p-2 " 
+                    placeholder="host address e.g http://wikipedia.org">
+                </div>
+                   
+                <div class="flex md:justify-between md:items-center flex-col md:flex-row  mt-2 gap-2 ">
+                    <div class="flex gap-2 flex-col md:flex-row">
+                    <button type="button" routerLink="../" class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Cancel</button>
+                    <button (click)="deleteBookmarks()" type="button" class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Delete</button>
+                </div>
+                    <button class="bg-gray-900 hover:bg-gray-950 rounded px-4 p-2 text-white text-xs">Save</button>
+                </div>
+                </form>
+    
+                </div>
+                </div> 
+                </div>

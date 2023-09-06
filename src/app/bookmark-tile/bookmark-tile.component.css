@@ -1,0 +1,21 @@
+.bookmarks-container img {
+    max-width: 26px;
+}
+
+.bgColor{
+    background-color:rgba(0, 0, 0, 0.664)
+}
+
+.bgColor:hover{
+    background-color:rgba(0, 0, 0, 0.849)
+}
+
+.bgColor:active {
+    transition: all 0.1s;
+    transform: translateY(4px );
+}
+
+.textStyles{
+    max-width: 44px;
+}
+
