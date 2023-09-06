@@ -1,4 +1,4 @@
-# CrudApplication
+# This is a simple incorporated Bookmarks, todo and note list webapp with a local storage 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
